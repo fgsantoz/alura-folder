@@ -19,17 +19,19 @@ int main(){
     scanf ("%d", &chute);
     printf ("Seu chute foi %d\n", chute);
 
-    if(chute == numerosecreto){
+    int acertou = (chute == numerosecreto);
+
+    if(acertou){
         printf ("Parabéns. Você acertou!\n");
         printf ("Jogue novamente, você é um bom jogador!\n");
     }
     else{
-        if(chute > numerosecreto){
+        int maior = chute > numerosecreto;
+        if(maior){
             printf ("Seu chute foi maior que o número secreto!\n");
         }
-         if(chute < numerosecreto){
+         else{
             printf ("Seu chute foi menor que o número secreto!\n");
         }        
-    }
-    
+    }    
 }
